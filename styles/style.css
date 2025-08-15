@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 5%;
+    box-shadow: 0px 4px 10px rgba(0, 255, 136, 0.3);
+    border-bottom: 2px solid #00ff88;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #00ff88;
+    text-shadow: 0 0 8px rgba(0, 255, 136, 0.7);
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #00ff88;
+}
+
+.logout-btn {
+    background: #00ff88;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.logout-btn:hover {
+    background: #66ffbb;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #00ff88;
+}
+
+.login-container {
+    background: #1e1e1e;
+    padding: 30px;
+    margin: 100px auto;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0,255,136,0.2);
+    text-align: center;
+}
+
+.login-container h2 {
+    color: #00ff88;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #00ff88;
+    border-radius: 5px;
+    background: #0a0a0a;
+    color: #fff;
+}
+
+button {
+    background-color: #00ff88;
+    border: none;
+    padding: 10px 15px;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 95%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #66ffbb;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    nav {
+        display: none;
+        flex-direction: column;
+        background: #0a0a0a;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        border-top: 1px solid #00ff88;
+    }
+    nav.active {
+        display: flex;
+    }
+}
