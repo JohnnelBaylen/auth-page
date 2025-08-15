@@ -1,37 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-
     <header class="navbar">
         <div class="logo" id="logo">{{ username }}</div>
-
+        
         <div class="menu-toggle" id="menu-toggle">
             <span></span>
             <span></span>
             <span></span>
         </div>
-
-        <nav id="nav-links">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+        
+        <nav class="nav-links" id="nav-links">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Contact</a>
+            <a href="{{ url_for('logout') }}" class="logout-btn">Log out</a>
         </nav>
     </header>
 
-    <main>
-        <h1>Welcome, {{ username }}!</h1>
-        <p>This is your dashboard.</p>
+    <main class="main-content">
+        <div class="welcome-section">
+            <h1 class="welcome-title">Welcome, {{ username }}!</h1>
+            <p class="welcome-subtitle">This is your personal dashboard where you can manage everything.</p>
+        </div>
+        
+        <div class="dashboard-grid">
+            <div class="dashboard-card">
+                <h3>Quick Stats</h3>
+                <p>View your latest activity and statistics</p>
+            </div>
+            <div class="dashboard-card">
+                <h3>Recent Activity</h3>
+                <p>Check your most recent actions and updates</p>
+            </div>
+            <div class="dashboard-card">
+                <h3>Settings</h3>
+                <p>Customize your account and preferences</p>
+            </div>
+        </div>
     </main>
 
     <script>
         document.getElementById('menu-toggle').addEventListener('click', function() {
-            document.getElementById('nav-links').classList.toggle('active');
+            const navLinks = document.getElementById('nav-links');
+            const menuToggle = document.getElementById('menu-toggle');
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
         });
     </script>
 </body>
