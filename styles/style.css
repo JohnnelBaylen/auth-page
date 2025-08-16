@@ -184,8 +184,7 @@ body {
 
 .login-image-section {
   flex: 1;
-  background: linear-gradient(135deg, rgba(0, 255, 136, 0.8), rgba(0, 200, 100, 0.9)),
-    url("/placeholder.svg?height=800&width=600") center / cover;
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.8), rgba(0, 200, 100, 0.9));
   position: relative;
   display: flex;
   align-items: center;
