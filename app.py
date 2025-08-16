@@ -4,7 +4,7 @@ app = Flask(__name__, template_folder='auth', static_folder='styles')
 app.secret_key = "yoursecretkey"
 
 # Correct credentials stored in dictionary
-CREDENTIALS = {
+ACCOUNT = {
     "Admin": "1234",
     "John": "john12",
     "User": "user12"
@@ -16,7 +16,7 @@ def login():
         username = request.form["username"]
         password = request.form["password"]
 
-        if username in CREDENTIALS and CREDENTIALS[username] == password:
+        if username in ACCOUNT and ACCOUNT[username] == password:
             session["username"] = username
             return redirect(url_for("home"))
         else:
